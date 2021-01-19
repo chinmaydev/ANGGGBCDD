@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form (submit)="validate()">
+    <div style="display: inline">
+       <label>Enter the below code</label> 
+    <input type="text" [(ngModel)]="captchaValue" name="tett">
+    {{captchaValue}}
+    <button type="submit">Validate</button>
+    <button (click)="newCode()">Refresh</button>
+    <label *ngIf="validation">Correct</label>
+    </div>
+    <div [innerHTML]='currentCaptcha'></div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!-- <html>
+  <body>
+<td>Name </td> 
+                <td> {{product.name}} </td>
+            </tr>
+            <tr>
+                <td> Price </td> 
+                <td> <span [innerHTML] = "getTotal()"> </span></td>
+            </tr>
+            <tr>
+                <td>Quantity </td> 
+                <td> {{product.quantity}} </td>
+            </tr>
+            <tr>
+                <td>Availablity </td> 
+                <td> {{product.instock ? 'In Stock' : 'Out of Stock'}} </td>
+            </tr>
+        </table>
+
+       <h3> *ngFor </h3>
+   
+       <table>
+          <tr *ngFor = "let property in productObj">
+           <td>{{property}}</td>
+         </tr> 
+         <tr *ngFor = "let product of productList">
+            <td> {{product.name}}</td>
+            <td> {{product.price}}</td>
+            <td> {{product.availablity ? 'Available' : 'Not Available'}}</td>
+         </tr>
+       </table>
+
+
+       <h3>class binding</h3>
+       <div [class.backEffect] = 'backEffectEnable'> Inside div</div>
+ 
+       <div [class] = "'backEffect'"> Inside div</div>
+
+    <div [ngClass] = "'backEffect'">  ngClass </div>
+
+    <div [ngClass] = "['backEffect','textEffects']">  ngClass </div>
+
+    <div [ngClass] = "{backEffect : true,textEffects: true}">  ngClass </div>
+
+   <h2>class.odd</h2>
+
+    <table border="2">
+      <tr *ngFor = "let product of productList, let odd = odd,let even = even" 
+        [class.odd] = 'odd' [class.even] = 'even'>  
+          <td> {{product.name}}</td>
+      </tr>
+      
+
+    </table>   
+
+    </body>
+    </html> -->

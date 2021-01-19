@@ -1,0 +1,16 @@
+ <body width="400px" style="border: 1px">
+<h2> {{title}}</h2>
+
+Total Number : {{count}}
+
+<div>
+    <textarea  cols="30" rows="10">
+    EventEmitter : If you want to call a method of parent when a event of child is created
+    Here event1 is the event name and the event is emmitted when the below button is clicked.
+    In parent template, for this event(event1), a method of parent can be configured
+</textarea>
+<button (click) ="onComponentClickEvent()"> Click me</button>
+</div>
+
+<ng-content></ng-content>
+</body>

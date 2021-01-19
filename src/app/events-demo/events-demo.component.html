@@ -1,0 +1,123 @@
+<!-- 
+<div width="200px">
+<button (click) = "onClick()"> Click me</button>
+</div>
+<div>
+<select (change) = "onChange()">
+    <option>A</option>
+    <option>B</option>
+</select>
+</div>
+
+<table width ="400px" align="center" border = "1">
+<tr>
+    <td>
+<button (click)="showImage()"> {{isVisible ? "Show" :"Hide"}} Image</button>
+</td>
+</tr>
+<tr>
+    <td *ngIf= "isVisible">
+    <img src="/assets/product.png" width ="200px">
+</td>
+</tr> -->
+<!-- <body (mousemove)="animate($event)">
+<div>
+    Move mouse   
+</div>
+<img src="/assets/product.png" width ="200px" [ngStyle]="floatingObject">
+</body> -->
+
+<!-- <div *ngFor ="let car of cars" align="center">
+   <h2 align ="center"> {{car.name}}</h2> <br>
+   <img [src]="car.photo" width="200px" height="100px"> <br>
+   {{car.likes}} &nbsp; {{car.dislikes}} <br>
+   <a href="#" (click)="likesCounter(car)"> Like</a>   &nbsp; 
+   <a href="#" (click)="disLikesCounter(car)"> Dislike</a>
+</div> -->
+
+<!-- <input type ="text" (input) = "onClickBind($event)" [value]="twoWayBindingIP">
+<span [innerHTML] = "twoWayBindingIP"> -->
+
+    <body>
+       <h2 align ="center">ngModel</h2>
+      <!--  <fieldset>
+         <legend> Add Product</legend>
+         <dl>
+           <dt> Name </dt>
+        
+         <dd>
+             <input type="text" #prodName>
+         </dd>
+        </dl>
+         <dl>
+                <dt> Price </dt>
+             
+              <dd>
+                  <input type="text" #prodPrice>
+        </dd>
+    </dl>
+        <dl>
+                <dt> Manifacture Date </dt>
+         
+              <dd>
+                  <input type="date" #mfgDate>
+              </dd>
+            </dl>
+            <br>
+            <button (click)="addProduct(prodName.value,prodPrice.value,mfgDate.value)">Add Product`</button>
+            </fieldset> -->
+
+            <fieldset>
+                    <legend> Add Product</legend>
+                    <dl>
+                      <dt> Name </dt>
+                   
+                    <dd>
+                        <input type="text" [(ngModel)]="prodName">
+                    </dd>
+                   </dl>
+                    <dl>
+                           <dt> Price </dt>
+                        
+                         <dd>
+                             <input type="text"  [(ngModel)]="prodPrice">
+                   </dd>
+               </dl>
+                   <dl>
+                           <dt> Manifacture Date </dt>
+                    
+                         <dd>
+                             <input type="date"  [(ngModel)]="mfgDate">
+                         </dd>
+                       </dl>
+                       <br>
+                       <button (click)="addProduct()">Add Product`</button>
+                       </fieldset>
+
+         <table border ="1" width ="400px" align ="center">
+           <th>
+               Name
+           </th>
+           <th>
+                Price
+            </th>
+            <th>
+                    Manifacture Date
+            </th>
+            <tr *ngFor='let product of prodList'>
+                <td>
+                    {{product.name}}
+                </td>
+                <td>
+                        {{product.price}}
+                </td>
+                <td>
+                            {{product.mfgDate}}
+                </td>
+                <td>
+                    <a href="#" (click)='removeProduct(product.id)'>Remove</a>
+                </td>
+            </tr>
+         </table>
+
+    </body>

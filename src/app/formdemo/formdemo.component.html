@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div align="center" >
+     {{ reactiveDemo.value | json}}
+    </div>
+
+    <!-- <form (submit)="onSubmit(demoForm.value)" #demoForm="ngForm">
+         <dl>
+           <dt>
+           Name : 
+           </dt>
+           <dd>
+            <input name="name" ngModel>
+           </dd>
+        </dl>
+        <dl>
+            <dt>
+            Age : 
+            </dt>
+            <dd>
+             <input name="age" ngModel >
+            </dd>
+         </dl>
+         <dl>
+                <dt>
+                Availabilty : 
+                </dt>
+                <dd>
+                 <input name="availabilty" ngModel type="radio" value="Available" > Yes
+                 <input name="availabilty" ngModel type="radio" value="Not Available" > No
+                </dd>
+             </dl>
+             <dl>
+                    <dt>
+                    City : 
+                    </dt>
+                    <dd>
+                     <select ngModel name="city" >
+                        <option *ngFor="let city of cities">{{city}}</option>
+                     </select>
+                    </dd>
+                 </dl>
+
+         <dl>
+            <dt>
+             
+            </dt>
+            <dd>
+             <button type="submit"> Submit</button>
+            </dd>
+         </dl>
+    </form> -->
+
+    <form [formGroup]="reactiveDemo" (ngSubmit)="onReactiveSubmit()">
+        Name : <input type="text" formControlName="name"/>  <br/>
+        Age : <input type="text" formControlName="age"/><br/>
+        <h3>Address</h3>
+        <div formGroupName = "address">
+         Street : <input type="text" formControlName="street"/>  <br/>
+        <label>Pincode : <input type="text" formControlName="pincode"/><br/></label> 
+        </div>  
+        <button type="submit"> Submit </button>
+    </form>
+
+    <input type="text" [formControl] ="age"/><br/>  {{age.value}}
+
+    <div align="center" >
+      {{ templateDriven.value | json}}
+     </div>
+</body>
+</html>
