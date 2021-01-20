@@ -23,5 +23,5 @@ export class ChildComponent implements OnInit {
 
   @Input() count : number;
 
-  title = "Child Component";
+  title = "Child Component - 1";
 }
