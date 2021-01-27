@@ -10,7 +10,7 @@ export class ConfigService {
   constructor(private http : HttpClient) { }
 
   options = {observe : "response" as const};
-  workspce ="resolved";
+  workspce ="Remote";
 
   getConfig(){
     return this.http.get("http://localhost:9091/testing/get/2");
